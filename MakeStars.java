@@ -2,11 +2,16 @@ import java.util.*;
 public class MakeStars{
   public static void main(String[] args){
     Scanner n = new Scanner(System.in);
+    String theline = "";
     while(n.hasNextLine()){
-      String line = n.nextLine();
-      Scanner p = new Scanner(line);
+      theline = n.nextLine();
+      Scanner p = new Scanner(theline);
       while(p.hasNext()){
-        System.out.print("*");
+        String word = p.next();
+        for(int i = 0; i < word.length(); i++){
+          System.out.print("*");
+        }
+        System.out.print(" ");
       }
       System.out.println();
      }
