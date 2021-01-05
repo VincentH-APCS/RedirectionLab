@@ -33,4 +33,22 @@ public class PigLatin{
        else return pigLatinSimple(s);
     }
 
+    public static String pigLatinBest(String s){
+      String output = s.toLowerCase();
+      String first = output.substring(0,1);
+      String last = output.substring(output.length() - 1, output.length());
+      if(first.charAt(0).isLetter() &&
+      (last.charAt(0).isLetter() || last.charAt(0).isDigit()) ) {
+        return pigLatin(s);
+      }
+      else{
+        if(first.charAt(0).isLetter()){
+          output = pigLatin(s.substring(0, output.length() - 1)) + last;
+        }
+      }
+      else{
+        return output;
+      }
+    }
+
   }
