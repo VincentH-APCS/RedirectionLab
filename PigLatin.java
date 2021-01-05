@@ -19,6 +19,9 @@ public class PigLatin{
        "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc", "sh", "sk", "sl",
        "sm", "sn", "sp", "st", "sw", "th", "tr", "tw", "wh", "wr"};
        String output = s.toLowerCase();
+       if(s.length() == 1){
+         return pigLatinSimple(s);
+       }
        String first2 = output.substring(0,2);
        int valid = 0;
        for(int i = 0; i < digraphs.length; i++){
