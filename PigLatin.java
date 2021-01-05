@@ -1,3 +1,4 @@
+import java.util.*;
 public class PigLatin{
   public static String pigLatinSimple(String s){
     String output = s.toLowerCase();
@@ -49,4 +50,20 @@ public class PigLatin{
 
     }
 
+    public static void main(String[] args){
+      Scanner n = new Scanner(System.in);
+      String theline = "";
+      while(n.hasNextLine()){
+        theline = n.nextLine();
+        Scanner p = new Scanner(theline);
+        while(p.hasNext()){
+          String word = p.next();
+          System.out.print(pigLatinBest(word));
+          if(p.hasNext()){
+            System.out.print(" ");
+          }
+    }
+    System.out.println();
   }
+}
+}
