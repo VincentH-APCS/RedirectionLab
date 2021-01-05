@@ -7,7 +7,7 @@ public class PigLatin{
       output = output + "hay";
     }
     else {
-      output = output.substring(1, output.length() - 1) + first + "ay";
+      output = output.substring(1, output.length()) + first + "ay";
     }
     s = output;
     return output;
